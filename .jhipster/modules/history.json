@@ -35,5 +35,14 @@
       "endOfLine" : "lf",
       "indentSize" : 2
     }
+  }, {
+    "module" : "vue-core",
+    "date" : "2024-02-21T06:50:41.214253Z",
+    "properties" : {
+      "projectName" : "lyon-craft-2024",
+      "baseName" : "lyonCraft2024",
+      "endOfLine" : "lf",
+      "indentSize" : 2
+    }
   } ]
 }
