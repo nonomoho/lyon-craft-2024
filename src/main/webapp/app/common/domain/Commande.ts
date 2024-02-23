@@ -1,4 +1,5 @@
-import { Crepe, Galette } from '@/common/domain/Crepe';
+import { Crepe } from '@/common/domain/Crepe';
+import { Galette } from '@/common/domain/Galette';
 import { Time } from '@/common/domain/Time';
 
 type Nom = string;
