@@ -18,11 +18,11 @@
     "prettier:format": "prettier --write '{,src/**/}*.{md,json,yml,html,js,ts,tsx,css,scss,vue,java,xml,feature}'",
     "preview": "vite preview",
     "start": "vite",
-    "test": "vitest run --coverage",
+    "test": "vitest",
+    "test:ci": "vitest --coverage",
     "test:component": "cypress open --config-file src/test/javascript/integration/cypress-config.ts",
     "test:component:headless": "cypress run --headless --config-file src/test/javascript/integration/cypress-config.ts",
-    "test:watch": "vitest --",
-    "test:watch:all": "jest --watchAll"
+    "typescheck": "tsc --noEmit"
   },
   "dependencies": {
     "axios": "1.6.7",
