@@ -6,7 +6,7 @@ describe('Hour', () => {
   });
 
   it('Should throw an error when hour is greater than 23', () => {
-    expect(() => Hour.of(-1)).toThrow();
+    expect(() => Hour.of(24)).toThrow();
   });
 
   it('Should get when valid', () => {

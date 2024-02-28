@@ -1,6 +1,5 @@
 import { Hour } from '@/common/domain/Hour';
-
-export type Minute = number; // 0 - 59
+import { Minute } from '@/common/domain/Minute';
 
 export interface Time {
   hour: Hour;
