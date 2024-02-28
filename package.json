@@ -20,8 +20,10 @@
     "start": "vite",
     "test": "vitest",
     "test:ci": "vitest --coverage",
-    "test:component": "cypress open --config-file src/test/javascript/integration/cypress-config.ts",
+    "test:component": "start-server-and-test start http-get://localhost:9090 test:component",
+    "test:component:ci": "start-server-and-test start http-get://localhost:9090 test:component:headless",
     "test:component:headless": "cypress run --headless --config-file src/test/javascript/integration/cypress-config.ts",
+    "test:component:open": "cypress open --config-file src/test/javascript/integration/cypress-config.ts",
     "typescheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -57,6 +59,7 @@
     "prettier-plugin-java": "2.5.0",
     "prettier-plugin-packagejson": "2.4.11",
     "sinon": "17.0.1",
+    "start-server-and-test": "^2.0.3",
     "ts-jest": "29.1.2",
     "typescript": "5.3.3",
     "vite": "5.1.3",

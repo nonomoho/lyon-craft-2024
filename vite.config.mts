@@ -23,6 +23,6 @@ export default defineConfig({
   },
   root: 'src/main/webapp',
   server: {
-    port: 9000,
+    port: 9090,
   },
 });
