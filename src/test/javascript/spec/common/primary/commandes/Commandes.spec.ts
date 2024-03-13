@@ -1,11 +1,11 @@
-import { CommandeVue } from '@/common/primary/commande';
+import { CommandesVue } from '@/common/primary/commandes';
 import { describe, it, expect } from 'vitest';
 import { shallowMount, VueWrapper } from '@vue/test-utils';
 
 let wrapper: VueWrapper;
 
 const wrap = () => {
-  wrapper = shallowMount(CommandeVue);
+  wrapper = shallowMount(CommandesVue);
 };
 
 describe('App', () => {

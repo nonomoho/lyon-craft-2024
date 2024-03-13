@@ -1,15 +1,11 @@
-import { HomepageVue } from '@/common/primary/homepage';
+import { CommandesVue } from '@/common/primary/commandes';
 import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
   {
-    path: '/',
-    redirect: { name: 'Homepage' },
-  },
-  {
-    path: '/home',
-    name: 'Homepage',
-    component: HomepageVue,
+    path: '/commandes',
+    name: 'CommandesVue',
+    component: CommandesVue,
   },
 ];
 
