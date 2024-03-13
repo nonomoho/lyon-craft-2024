@@ -20,7 +20,7 @@
     "start": "vite",
     "test": "vitest",
     "test:ci": "vitest --coverage",
-    "test:component": "start-server-and-test start http-get://localhost:9090 test:component",
+    "test:component": "start-server-and-test start http-get://localhost:9090 test:component:open",
     "test:component:ci": "start-server-and-test start http-get://localhost:9090 test:component:headless",
     "test:component:headless": "cypress run --headless --config-file src/test/javascript/integration/cypress-config.ts",
     "test:component:open": "cypress open --config-file src/test/javascript/integration/cypress-config.ts",
