@@ -1,3 +1,13 @@
 <div>
   <h1 data-selector="commandes-title">Liste des commandes</h1>
+  <div v-if="commandes.length > 0">
+    <table data-selector="commandes-table" aria-label="commandes-table">
+      <tr>
+        <th>Client</th>
+      </tr>
+      <tr v-for="commande in commandes" data-selector="commandes-table-row">
+        <td>{{ commande.client.nom }}</td>
+      </tr>
+    </table>
+  </div>
 </div>

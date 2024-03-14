@@ -1,9 +1,9 @@
 node_modules/
 src/main/docker/
-src/test/javascript/cypress/
-src/test/javascript/protractor.conf.js
+src/test/cypress/
+src/test/protractor.conf.js
 jest.conf.js
-src/test/javascript/jest.conf.js
+src/test/jest.conf.js
 webpack/
 target/
 build/
