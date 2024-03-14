@@ -41,6 +41,7 @@ export default defineConfig({
         '.lintstagedrc.cjs',
         'src/test/**/*',
         'target/**',
+        'src/main/webapp/app/common/primary/**',
       ],
       provider: 'istanbul',
       reportsDirectory: 'target/test-results/',
