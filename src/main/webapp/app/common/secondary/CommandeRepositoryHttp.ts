@@ -1,8 +1,9 @@
 import { Commande } from '@/common/domain/Commande';
 import { CommandesJson, toCommande } from '@/common/secondary/CommandesJson';
 import { AxiosHttp } from '@/http/AxiosHttp';
+import { CommandeRepository } from '@/common/domain/CommandeRepository';
 
-export class CommandeRepositoryHttp {
+export class CommandeRepositoryHttp implements CommandeRepository {
   constructor(private axiosHttp: AxiosHttp) {}
 
   list(): Promise<Commande[]> {

@@ -4,5 +4,5 @@ import { InjectionKey } from 'vue';
 export const COMMANDE_REPOSITORY: InjectionKey<CommandeRepository> = Symbol('Commande repository');
 
 export interface CommandeRepository {
-  list(): Commande[];
+  list(): Promise<Commande[]>;
 }
