@@ -1,3 +1,4 @@
+import { CommandesVue } from '@/common/primary/commandes';
 import { describe, it, expect } from 'vitest';
 import { shallowMount, VueWrapper } from '@vue/test-utils';
 import { AppVue } from '@/common/primary/app';
@@ -16,19 +17,11 @@ const wrap = () => {
 };
 
 describe('Router', () => {
-  it('should redirect to App by default', async () => {
+  it('should go to CommandesVue', async () => {
     wrap();
-    await router.push('/');
+    await router.push('/commandes');
     await wrapper.vm.$nextTick();
 
-    expect(wrapper.findComponent(AppVue)).toBeTruthy();
-  });
-
-  it('should go to AppVue', async () => {
-    wrap();
-    await router.push('/home');
-    await wrapper.vm.$nextTick();
-
-    expect(wrapper.findComponent(AppVue)).toBeTruthy();
+    expect(wrapper.findComponent(CommandesVue)).toBeTruthy();
   });
 });

@@ -1,6 +1,6 @@
 import { Price } from './Price';
 
-export type IngredientSucre = 'sucre' | 'nutella' | 'caramel au beurre salé' | 'beurre';
+export type IngredientSucre = string;
 
 export interface Crepe {
   price: Price;
