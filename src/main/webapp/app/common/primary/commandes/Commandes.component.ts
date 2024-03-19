@@ -1,6 +1,7 @@
 import { COMMANDE_REPOSITORY } from '@/common/domain/CommandeRepository';
 import { inject, onMounted, ref } from 'vue';
 import { toCommandeToDisplay, CommandeToDisplay } from './CommandeToDisplay';
+import router from '@/router/router';
 
 export default {
   name: 'CommandesVue',
@@ -12,6 +13,10 @@ export default {
       commandes.value = (await commandeRepository.list()).map(toCommandeToDisplay);
     });
 
-    return { commandeRepository, commandes };
+    const addCommande = () => {
+      router.push('/commandes/add');
+    };
+
+    return { commandeRepository, commandes, addCommande };
   },
 };

@@ -1,12 +1,13 @@
 <div>
-  <h1 data-selector="commandes-title">Liste des commandes</h1>
+  <h1 data-selector="commandes.title">Liste des commandes</h1>
+  <button data-selector="commandes.add" @click="addCommande">Ajouter une commande</button>
   <div v-if="commandes.length > 0">
-    <table data-selector="commandes-table" aria-label="commandes-table">
+    <table data-selector="commandes.table" aria-label="commandes-table">
       <tr>
         <th>Client</th>
       </tr>
-      <tr v-for="commande in commandes" data-selector="commandes-table-row">
-        <td>{{ commande.client.nom }}</td>
+      <tr v-for="commande in commandes" data-selector="commandes.table.row">
+        <td data-selector="commandes.table.row.client-name">{{ commande.client.nom }}</td>
       </tr>
     </table>
   </div>
