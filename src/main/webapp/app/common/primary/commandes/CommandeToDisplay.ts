@@ -12,12 +12,12 @@ export interface CommandeToDisplay {
   heureDeRetrait: string;
 }
 
-interface CrepeToDisplay {
+export interface CrepeToDisplay {
   price: string;
   ingredients: string[];
 }
 
-interface GaletteToDisplay {
+export interface GaletteToDisplay {
   price: string;
   ingredients: string[];
 }
@@ -32,12 +32,12 @@ export const toCommandeToDisplay = (commande: Commande): CommandeToDisplay => ({
   heureDeRetrait: `${commande.heureDeRetrait.hour.toHuman()}:${commande.heureDeRetrait.minute.toHuman()}`,
 });
 
-const toCrepeToDisplay = (crepe: Crepe): CrepeToDisplay => ({
+export const toCrepeToDisplay = (crepe: Crepe): CrepeToDisplay => ({
   price: crepe.price.toHuman(),
   ingredients: crepe.ingredients,
 });
 
-const toGaletteToDisplay = (galette: Galette): GaletteToDisplay => ({
+export const toGaletteToDisplay = (galette: Galette): GaletteToDisplay => ({
   price: galette.price.toHuman(),
   ingredients: galette.ingredients,
 });

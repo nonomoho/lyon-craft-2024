@@ -1,0 +1,14 @@
+[
+  {
+    "price": 3,
+    "ingredients": ["chocolat"]
+  },
+  {
+    "price": 2,
+    "ingredients": ["sucre"]
+  },
+  {
+    "price": 3,
+    "ingredients": ["beurre", "sucre"]
+  }
+]
