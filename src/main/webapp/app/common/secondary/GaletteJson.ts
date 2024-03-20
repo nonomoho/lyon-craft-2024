@@ -10,3 +10,8 @@ export const toGalette = (galetteJson: GaletteJson): Galette => ({
   price: Price.of(galetteJson.price),
   ingredients: galetteJson.ingredients,
 });
+
+export const toGaletteJson = (galette: Galette): GaletteJson => ({
+  price: galette.price.get(),
+  ingredients: galette.ingredients,
+});

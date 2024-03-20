@@ -1,6 +1,7 @@
 <div>
-  <h1>add</h1>
+  <input type="text" data-selector="add-commande.form.client.name" v-model="client.nom" />
   <select data-selector="add-commande.form.crepes" multiple>
     <option data-selector="add-commande.form.crepes.option" v-for="crepe in crepesAvailable" :value="crepe">{{crepe.price}}</option>
   </select>
+  <button data-selector="add-commande.create" @click="create">Créer ma commande</button>
 </div>
