@@ -1,6 +1,6 @@
-import { CommandesJson } from '@/common/secondary/CommandesJson';
+import { CommandeJson } from '@/common/secondary/CommandeJson';
 
-export const commandesFixture: CommandesJson = {
+export const commandesFixture: CommandeJson = {
   client: {
     nom: 'nom',
     numero: '0685587326',

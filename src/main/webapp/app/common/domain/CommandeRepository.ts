@@ -5,4 +5,5 @@ export const COMMANDE_REPOSITORY: InjectionKey<CommandeRepository> = Symbol('Com
 
 export interface CommandeRepository {
   list(): Promise<Commande[]>;
+  create(commande: Commande): Promise<void>;
 }
