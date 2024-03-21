@@ -58,6 +58,8 @@
     "prettier-plugin-gherkin": "2.2.1",
     "prettier-plugin-java": "2.5.0",
     "prettier-plugin-packagejson": "2.4.11",
+    "sass": "^1.72.0",
+    "sass-loader": "^14.1.1",
     "sinon": "17.0.1",
     "start-server-and-test": "^2.0.3",
     "ts-jest": "29.1.2",
