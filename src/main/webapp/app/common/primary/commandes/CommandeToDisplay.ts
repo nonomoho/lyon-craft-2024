@@ -12,15 +12,17 @@ export interface CommandeToDisplay {
   heureDeRetrait: string;
 }
 
-export interface CrepeToDisplay {
-  price: string;
-  ingredients: string[];
-}
+export type CrepeToDisplay = string;
 
-export interface GaletteToDisplay {
-  price: string;
-  ingredients: string[];
-}
+export type GaletteToDisplay = string;
+
+type Dish = Crepe | Galette;
+
+const dishToDisplay = (dish: Dish): string => {
+  const ingredients = dish.ingredients.join('/');
+
+  return `price: ${dish.price.toHuman()}, ingredients: ${ingredients}`;
+};
 
 export const toCommandeToDisplay = (commande: Commande): CommandeToDisplay => ({
   client: {
@@ -32,12 +34,6 @@ export const toCommandeToDisplay = (commande: Commande): CommandeToDisplay => ({
   heureDeRetrait: `${commande.heureDeRetrait.hour.toHuman()}:${commande.heureDeRetrait.minute.toHuman()}`,
 });
 
-export const toCrepeToDisplay = (crepe: Crepe): CrepeToDisplay => ({
-  price: crepe.price.toHuman(),
-  ingredients: crepe.ingredients,
-});
+export const toCrepeToDisplay = (crepe: Crepe): CrepeToDisplay => dishToDisplay(crepe);
 
-export const toGaletteToDisplay = (galette: Galette): GaletteToDisplay => ({
-  price: galette.price.toHuman(),
-  ingredients: galette.ingredients,
-});
+export const toGaletteToDisplay = (galette: Galette): GaletteToDisplay => dishToDisplay(galette);
