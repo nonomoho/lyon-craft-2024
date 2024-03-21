@@ -171,3 +171,5 @@ dist/
 ######################
 okta.sh
 auth0.sh
+
+cypress/screenshots/

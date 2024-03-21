@@ -6,14 +6,22 @@
     },
     "crepes": [
       {
-        "price": 6,
-        "ingredients": ["sucre"]
+        "price": 2,
+        "ingredients": ["sucre", "beurre"]
+      },
+      {
+        "price": 3,
+        "ingredients": ["caramel"]
       }
     ],
     "galettes": [
       {
-        "price": 10,
+        "price": 4,
         "ingredients": ["oeuf"]
+      },
+      {
+        "price": 5,
+        "ingredients": ["fromage", "oeuf"]
       }
     ],
     "heureDeRetrait": "12:30"

@@ -1,6 +1,7 @@
 import { CommandeJson } from '../../../../../main/webapp/app/common/secondary/CommandeJson';
+import { dataSelector } from '../../../selector.fixture';
 
-describe('Add commande', () => {
+describe('Add "commande"', () => {
   beforeEach(() => {
     cy.intercept('GET', '/lyon-craft-2024/crepes', { fixture: 'crepes.json' }).as('crepes');
     cy.intercept('GET', '/lyon-craft-2024/commandes', []);
@@ -8,15 +9,15 @@ describe('Add commande', () => {
     cy.wait('@crepes');
   });
 
-  it('should have 3 crepes in list', () => {
-    cy.get('[data-selector="add-commande.form.crepes"]').should('exist');
+  it('should have 3 "crepes" in list', () => {
+    cy.get(dataSelector('add-commande.form.crepes')).should('exist');
 
-    cy.get('[data-selector="add-commande.form.crepes.option"]').should('have.length', 3);
+    cy.get(dataSelector('add-commande.form.crepes.option')).should('have.length', 3);
   });
 
-  it('should create a commande and redirect to the command list', () => {
+  it('should create a "commande" and redirect to the "commande" list', () => {
     cy.intercept('POST', '/lyon-craft-2024/commandes/create', {}).as('create');
-    cy.get('[data-selector="add-commande.form.client.name"]').type('Name');
+    cy.get(dataSelector('add-commande.form.client.name')).type('Name');
     const fakeCommande: CommandeJson = {
       client: {
         nom: 'Name',
@@ -26,7 +27,7 @@ describe('Add commande', () => {
       galettes: [],
       heureDeRetrait: '12:00',
     };
-    cy.get('[data-selector="add-commande.create"]').click();
+    cy.get(dataSelector('add-commande.create')).click();
 
     cy.wait('@create').then(interception => {
       expect(interception.request.url).to.contain('/lyon-craft-2024/commandes/create');
