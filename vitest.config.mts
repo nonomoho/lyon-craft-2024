@@ -42,6 +42,7 @@ export default defineConfig({
         'src/test/**/*',
         'target/**',
         'src/main/webapp/app/common/primary/**',
+        'src/main/webapp/app/galette-and-co/primary/**',
       ],
       provider: 'istanbul',
       reportsDirectory: 'target/test-results/',
