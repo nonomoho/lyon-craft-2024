@@ -1,7 +1,7 @@
-import { CommandesVue } from '@/common/primary/commandes';
+import { AppVue } from '@/common/primary/app';
+import { CommandesVue } from '@/galette-and-co/primary/commandes';
 import { describe, it, expect } from 'vitest';
 import { shallowMount, VueWrapper } from '@vue/test-utils';
-import { AppVue } from '@/common/primary/app';
 
 import router from '@/router/router';
 

@@ -1,4 +1,4 @@
-import { CommandeJson } from '../../../../../main/webapp/app/common/secondary/CommandeJson';
+import { CommandeJson } from '../../../../../main/webapp/app/galette-and-co/secondary/CommandeJson';
 import { dataSelector } from '../../../selector.fixture';
 
 describe('Add "commande"', () => {

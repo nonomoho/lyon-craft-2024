@@ -1,5 +1,5 @@
-import { AddCommandeVue } from '@/common/primary/commande';
-import { CommandesVue } from '@/common/primary/commandes';
+import { AddCommandeVue } from '@/galette-and-co/primary/add-commande';
+import { CommandesVue } from '@/galette-and-co/primary/commandes';
 import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
