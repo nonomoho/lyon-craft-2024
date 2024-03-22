@@ -1,7 +1,13 @@
-<div>
-  <input type="text" data-selector="add-commande.form.client.name" v-model="client.nom" />
-  <select data-selector="add-commande.form.crepes" multiple>
-    <option data-selector="add-commande.form.crepes.option" v-for="crepe in crepesAvailable" :value="crepe">{{crepe.price}}</option>
+<div class="add-commande-form">
+  <label for="cient-name">Nom</label>
+  <input id="cient-name" class="add-commande-form--field" type="text" data-selector="add-commande.form.client.name" v-model="client.nom" />
+  <label for="cient-numero">Numéro</label>
+  <input id="cient-numero" class="add-commande-form--field" type="text" v-model="client.numero" />
+  <label for="client-crepes">Crêpes</label>
+  <select id="client-crepes" class="add-commande-form--field" data-selector="add-commande.form.crepes" multiple>
+    <option data-selector="add-commande.form.crepes.option" v-for="crepe in crepesAvailable" :value="crepe">{{ crepe }}</option>
   </select>
-  <button data-selector="add-commande.create" @click="create">Créer ma commande</button>
+  <label for="cient-heure-de-retrait">Heure de retrait</label>
+  <input id="cient-heure-de-retrait" class="add-commande-form--field" type="time" v-model="client.heureDeRetrait" />
+  <button class="add-commande-form--field" data-selector="add-commande.create" @click="create">Créer ma commande</button>
 </div>
