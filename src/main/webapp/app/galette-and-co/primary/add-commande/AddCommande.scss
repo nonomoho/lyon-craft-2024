@@ -1,0 +1,19 @@
+.add-commande-form {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  padding: 1rem;
+
+  &--title {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  &--field {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    min-height: 2rem;
+    padding: 0.5rem;
+    box-sizing: border-box;
+  }
+}
