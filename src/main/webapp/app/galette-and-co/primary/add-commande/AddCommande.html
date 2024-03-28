@@ -4,8 +4,10 @@
   <label for="cient-numero">Numéro</label>
   <input id="cient-numero" class="add-commande-form--field" type="text" v-model="client.numero" />
   <label for="client-crepes">Crêpes</label>
-  <select id="client-crepes" class="add-commande-form--field" data-selector="add-commande.form.crepes" multiple>
-    <option data-selector="add-commande.form.crepes.option" v-for="crepe in crepesAvailable" :value="crepe">{{ crepe }}</option>
+  <select id="client-crepes" class="add-commande-form--field" data-selector="add-commande.form.crepes" v-model="selectedCrepes" multiple>
+    <option data-selector="add-commande.form.crepes.option" :key="crepe.id" v-for="crepe in crepesToDisplay" :value="crepe.id">
+      {{ crepe.description }}
+    </option>
   </select>
   <label for="cient-heure-de-retrait">Heure de retrait</label>
   <input id="cient-heure-de-retrait" class="add-commande-form--field" type="time" v-model="client.heureDeRetrait" />
