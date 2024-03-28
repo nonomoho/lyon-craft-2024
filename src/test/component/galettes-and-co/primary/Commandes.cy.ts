@@ -1,4 +1,4 @@
-import { dataSelector } from '../../../selector.fixture';
+import { dataSelector } from '../../selector.fixture';
 
 const getFirstTableRow = () => cy.get(dataSelector('commandes.table.row')).first();
 

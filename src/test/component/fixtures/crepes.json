@@ -1,14 +1,22 @@
 [
   {
+    "id": 1,
     "price": 3,
     "ingredients": ["chocolat"]
   },
   {
+    "id": 2,
     "price": 2,
     "ingredients": ["sucre"]
   },
   {
+    "id": 3,
     "price": 3,
     "ingredients": ["beurre", "sucre"]
+  },
+  {
+    "id": 4,
+    "price": 3,
+    "ingredients": ["caramel"]
   }
 ]

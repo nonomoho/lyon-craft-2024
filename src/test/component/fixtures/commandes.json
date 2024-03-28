@@ -6,20 +6,24 @@
     },
     "crepes": [
       {
+        "id": 3,
         "price": 2,
         "ingredients": ["sucre", "beurre"]
       },
       {
+        "id": 4,
         "price": 3,
         "ingredients": ["caramel"]
       }
     ],
     "galettes": [
       {
+        "id": 1,
         "price": 4,
         "ingredients": ["oeuf"]
       },
       {
+        "id": 2,
         "price": 5,
         "ingredients": ["fromage", "oeuf"]
       }
@@ -33,13 +37,15 @@
     },
     "crepes": [
       {
-        "price": 8,
+        "id": 1,
+        "price": 3,
         "ingredients": ["chocolat"]
       }
     ],
     "galettes": [
       {
-        "price": 7,
+        "id": 3,
+        "price": 4,
         "ingredients": ["saucisse"]
       }
     ],

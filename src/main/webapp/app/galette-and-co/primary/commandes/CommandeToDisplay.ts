@@ -12,9 +12,15 @@ export interface CommandeToDisplay {
   heureDeRetrait: string;
 }
 
-export type CrepeToDisplay = string;
+export interface CrepeToDisplay {
+  id: number;
+  description: string;
+}
 
-export type GaletteToDisplay = string;
+export interface GaletteToDisplay {
+  id: number;
+  description: string;
+}
 
 type Dish = Crepe | Galette;
 
@@ -34,6 +40,12 @@ export const toCommandeToDisplay = (commande: Commande): CommandeToDisplay => ({
   heureDeRetrait: `${commande.heureDeRetrait.hour.toHuman()}:${commande.heureDeRetrait.minute.toHuman()}`,
 });
 
-export const toCrepeToDisplay = (crepe: Crepe): CrepeToDisplay => dishToDisplay(crepe);
+export const toCrepeToDisplay = (crepe: Crepe): CrepeToDisplay => ({
+  id: crepe.id,
+  description: dishToDisplay(crepe),
+});
 
-export const toGaletteToDisplay = (galette: Galette): GaletteToDisplay => dishToDisplay(galette);
+export const toGaletteToDisplay = (galette: Galette): GaletteToDisplay => ({
+  id: galette.id,
+  description: dishToDisplay(galette),
+});

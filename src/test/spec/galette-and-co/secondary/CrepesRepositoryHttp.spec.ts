@@ -15,18 +15,22 @@ describe('CrepesRepositoryHttp', () => {
 
     const crepesExpected: Crepe[] = [
       {
+        id: 1,
         price: Price.of(2),
         ingredients: ['sucre'],
       },
       {
+        id: 2,
         price: Price.of(3),
         ingredients: ['beurre', 'sucre'],
       },
       {
+        id: 3,
         price: Price.of(3),
         ingredients: ['sucre', 'citron'],
       },
       {
+        id: 4,
         price: Price.of(3),
         ingredients: ['caramel'],
       },

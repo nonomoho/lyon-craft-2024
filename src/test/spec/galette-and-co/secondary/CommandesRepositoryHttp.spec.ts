@@ -22,8 +22,8 @@ describe('CommandesRepositoryHttp', () => {
         nom: 'nom',
         numero: '0685587326',
       },
-      crepes: [{ price: Price.of(6), ingredients: ['sucre'] }],
-      galettes: [{ price: Price.of(10), ingredients: ['oeuf'] }],
+      crepes: [{ id: 1, price: Price.of(6), ingredients: ['sucre'] }],
+      galettes: [{ id: 2, price: Price.of(10), ingredients: ['oeuf'] }],
       heureDeRetrait: {
         hour: Hour.of(12),
         minute: Minute.of(30),
@@ -41,8 +41,8 @@ describe('CommandesRepositoryHttp', () => {
         nom: 'nom',
         numero: '0685587326',
       },
-      crepes: [{ price: Price.of(6), ingredients: ['sucre'] }],
-      galettes: [{ price: Price.of(10), ingredients: ['oeuf'] }],
+      crepes: [{ id: 1, price: Price.of(6), ingredients: ['sucre'] }],
+      galettes: [{ id: 2, price: Price.of(10), ingredients: ['oeuf'] }],
       heureDeRetrait: {
         hour: Hour.of(12),
         minute: Minute.of(30),

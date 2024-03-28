@@ -7,12 +7,14 @@ export const commandesFixture: CommandeJson = {
   },
   crepes: [
     {
+      id: 1,
       price: 6,
       ingredients: ['sucre'],
     },
   ],
   galettes: [
     {
+      id: 2,
       price: 10,
       ingredients: ['oeuf'],
     },

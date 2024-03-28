@@ -15,14 +15,17 @@ describe('GalettesRepositoryHttp', () => {
 
     const galettesExpected: Galette[] = [
       {
+        id: 1,
         price: Price.of(3),
         ingredients: ['oeuf'],
       },
       {
+        id: 2,
         price: Price.of(4),
         ingredients: ['jambon', 'oeuf', 'fromage'],
       },
       {
+        id: 3,
         price: Price.of(4),
         ingredients: ['saucisse'],
       },
