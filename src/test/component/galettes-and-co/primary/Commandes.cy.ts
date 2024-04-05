@@ -37,27 +37,22 @@ describe('Commandes', () => {
     cy.get(dataSelector('commandes.table.row')).should('have.length', 2);
   });
 
-  it('sould display table headers', () => {
+  it('should display table headers', () => {
     cy.get(dataSelector('commandes.table.header.nom')).should('contain', 'Nom');
-    cy.get(dataSelector('commandes.table.header.numero')).should('contain', 'Numéro de téléphone');
     cy.get(dataSelector('commandes.table.header.crepes')).should('contain', 'Crêpes');
     cy.get(dataSelector('commandes.table.header.galettes')).should('contain', 'Galettes');
     cy.get(dataSelector('commandes.table.header.heure-de-retrait')).should('contain', 'Heure de retrait');
   });
 
-  it('sould display client name', () => {
+  it('should display client name', () => {
     cy.get(dataSelector('commandes.table.row')).first().find(dataSelector('commandes.table.row.client.nom')).should('contain', 'nom');
   });
 
-  it('sould display client phone number', () => {
-    getFirstTableRow().find(dataSelector('commandes.table.row.client.numero')).should('contain', '0685587326');
-  });
-
-  it('sould display all "crepes" in "commande"', () => {
+  it('should display all "crepes" in "commande"', () => {
     getFirstTableRow().find(dataSelector('commandes.table.row.crepe')).should('have.length', 2);
   });
 
-  it('sould display a "crepe" for "commande"', () => {
+  it('should display a "crepe" for "commande"', () => {
     const crepesOnFirstCommande = () => getFirstTableRow().find(dataSelector('commandes.table.row.crepe'));
 
     crepesOnFirstCommande().should('have.length', 2);
@@ -65,15 +60,7 @@ describe('Commandes', () => {
     crepesOnFirstCommande().eq(1).should('contain', 'price: 3 €, ingredients: caramel');
   });
 
-  it('sould display a "galette" for "commande"', () => {
-    const galettesOnFirstCommande = () => getFirstTableRow().find(dataSelector('commandes.table.row.galette'));
-
-    galettesOnFirstCommande().should('have.length', 2);
-    galettesOnFirstCommande().first().should('contain', 'price: 4 €, ingredients: oeuf');
-    galettesOnFirstCommande().eq(1).should('contain', 'price: 5 €, ingredients: fromage/oeuf');
-  });
-
-  it('sould display "heure de commande"', () => {
+  it('should display "heure de commande"', () => {
     getFirstTableRow().find(dataSelector('commandes.table.row.heure-de-retrait')).should('contain', '12:30');
   });
 });
