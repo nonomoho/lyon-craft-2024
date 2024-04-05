@@ -4,7 +4,6 @@ import { COMMANDE_REPOSITORY } from '@/galette-and-co/domain/CommandeRepository'
 import { CREPE_REPOSITORY } from '@/galette-and-co/domain/dishes/CrepeRepository';
 import { Hour } from '@/galette-and-co/domain/time/Hour';
 import { Minute } from '@/galette-and-co/domain/time/Minute';
-import router from '@/router/router';
 import { inject, onMounted, ref } from 'vue';
 import { CrepeToDisplay, toCrepeToDisplay } from '../commandes/CommandeToDisplay';
 import { Crepe } from '@/galette-and-co/domain/dishes/Crepe';
@@ -40,7 +39,6 @@ export default {
         },
       };
       await commandeRepository.create(fakeCommande);
-      await router.push('/commandes');
     };
 
     return {

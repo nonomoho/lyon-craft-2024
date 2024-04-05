@@ -15,7 +15,7 @@ describe('Add "commande"', () => {
     cy.get(dataSelector('add-commande.form.crepes.option')).should('have.length', 4);
   });
 
-  it('should create a "commande" and redirect to the "commande" list', () => {
+  it('should create a "commande"', () => {
     cy.intercept('POST', '/lyon-craft-2024/commandes/create', {}).as('create');
     cy.get(dataSelector('add-commande.form.client.name')).type('Name');
     cy.get(dataSelector('add-commande.form.crepes')).select([1, 4]);
@@ -47,7 +47,5 @@ describe('Add "commande"', () => {
 
       expect(interception.request.body.client.nom).to.equals(fakeCommande.client.nom);
     });
-
-    cy.url().should('eq', Cypress.config().baseUrl + '/commandes');
   });
 });
